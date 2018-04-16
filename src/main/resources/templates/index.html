@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello Templates</title>
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+</head>
+<body>
+<h1>Hello Spring!</h1>
+<!--${author} is a place holder that will be updated with date -->
+<p>This site was built by <span th:text="${author}"></span></p>
+<!--<p>My favorite food is <span th:text="${favoriteFood}"></span></p>-->
+<p>My favorite movie is <span th:text="${favoriteMovie}"></span></p>
+<h2>My favorite food</h2>
+<ul>
+    <!--make sure all of the place holders are within the tags-->
+    <li th:each="food:${favoriteFoods}" th:text="${food}"></li>
+</ul>
+
+<h2>Zebra Picture</h2>
+<img src="../img/Picture1.png">
+</body>
+</html>
